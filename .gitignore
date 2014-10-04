@@ -1,0 +1,21 @@
+#python specific
+*.pyc
+ 
+## generic files to ignore
+*~
+*.lock
+*.out
+
+.idea/
+
+# Mac OS X
+.DS_Store
+._*
+
+# vim
+*.swp
+
+logs/
+logs/*.log*
+
+/venv
