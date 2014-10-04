@@ -8,19 +8,23 @@ The crawler is fairly tested and skips visited and prohibited urls.
     - prohibited urls are parts of the site that are not your business territory that should be avoided for parsing
 
 
+Something to take away home with you is GIL(Global Interpreter Lock) prevents multiple native threads from executing Python bytecodes at once.
+BUT, potentially blocking or long-running operations, such as I/O(web requests), image processing, and NumPy number crunching, happen outside the GIL.
+
 How to run ?
 ============
 
-* Install required packages:
+Install required packages:
 
 on the cmd line run:
 
-    * sudo pip install -r requirements.txt
+    ** sudo pip install -r requirements.txt
+
+Note:if you have difficulty installing lxml in Max OSx, try:
+
+    ** STATIC_DEPS=true pip install lxml
 
 this should install all packages for you, then run:
 
-    * python main.py
+    ** python main.py
 
-
-if you have difficulty installing lxml in Max OSx, try:
-    * STATIC_DEPS=true pip install lxml
